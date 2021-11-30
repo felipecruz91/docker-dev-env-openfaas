@@ -3,7 +3,7 @@
 FROM golang:1.17-alpine
 
 RUN <<EOT ash
-    apk add --no-cache git make bash shadow
+    apk add --no-cache git make bash shadow perl-mime-base64
 EOT
 
 COPY --from=felipecruz/dev-environments-openfaas:0.1.0-alpha /usr/local/bin/docker /usr/local/bin/docker
